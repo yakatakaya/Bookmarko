@@ -7,6 +7,7 @@
           <v-card-text>
             <ul class="no-bullets">
               <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="left-align">
+                <img :src="getFaviconUrl(bookmark.url)" alt="favicon" class="favicon">
                 <a :href="bookmark.url" target="_blank">{{ bookmark.title }}</a>
               </li>
             </ul>
@@ -79,6 +80,9 @@ export default defineComponent({
       bookmarkTreeNodes.forEach((node) => processNode(node));
       return folders;
     },
+    getFaviconUrl(url: string): string {
+      return `https://www.google.com/s2/favicons?domain=${new URL(url).hostname}`;
+    },
   },
 });
 </script>
@@ -100,5 +104,11 @@ export default defineComponent({
 
 li.left-align:hover {
   background-color: #e0e0e0; /* ハイライトの背景色を指定します */
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 </style>
