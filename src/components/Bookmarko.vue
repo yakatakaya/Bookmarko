@@ -111,4 +111,9 @@ li.left-align:hover {
   height: 16px;
   margin-right: 8px;
 }
+
+a {
+  color: inherit; /* リンクの文字色を親要素から継承します */
+  text-decoration: none; /* 必要に応じて下線を消します */
+}
 </style>
