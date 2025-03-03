@@ -1,4 +1,23 @@
 chrome.runtime.onInstalled.addListener(() => {
-    const extensionId = chrome.runtime.id; // 拡張機能のIDを取得
-    console.log("拡張ID:", extensionId);
+  chrome.bookmarks.getTree((bookmarkTreeNodes) => {
+    chrome.storage.local.set({ bookmarks: bookmarkTreeNodes });
   });
+});
+
+chrome.bookmarks.onChanged.addListener(() => {
+  chrome.bookmarks.getTree((bookmarkTreeNodes) => {
+    chrome.storage.local.set({ bookmarks: bookmarkTreeNodes });
+  });
+});
+
+chrome.bookmarks.onCreated.addListener(() => {
+  chrome.bookmarks.getTree((bookmarkTreeNodes) => {
+    chrome.storage.local.set({ bookmarks: bookmarkTreeNodes });
+  });
+});
+
+chrome.bookmarks.onRemoved.addListener(() => {
+  chrome.bookmarks.getTree((bookmarkTreeNodes) => {
+    chrome.storage.local.set({ bookmarks: bookmarkTreeNodes });
+  });
+});
