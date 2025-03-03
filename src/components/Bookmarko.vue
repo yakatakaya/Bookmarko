@@ -1,18 +1,20 @@
 <template>
-  <v-row>
-    <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="6" lg="3">
-      <v-card>
-        <v-card-title>{{ folder.title }}</v-card-title>
-        <v-card-text>
-          <ul>
-            <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="left-align">
-              <a :href="bookmark.url" target="_blank">{{ bookmark.title }}</a>
-            </li>
-          </ul>
-        </v-card-text>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container fluid>
+    <v-row align="stretch">
+      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="3" lg="2">
+        <v-card>
+          <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
+          <v-card-text>
+            <ul class="no-bullets">
+              <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="left-align">
+                <a :href="bookmark.url" target="_blank">{{ bookmark.title }}</a>
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -85,5 +87,12 @@ export default defineComponent({
 .left-align {
   text-align: left;
 }
-
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+.custom-card-title {
+  background-color: #7b7b7b; /* ここで背景色を指定します */
+  color: #ffffff; /* 必要に応じてテキストの色も指定します */
+}
 </style>
