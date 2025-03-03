@@ -3,21 +3,15 @@ import Bookmarko from './components/Bookmarko.vue'
 </script>
 
 <template>
-  <div class="app-container">
+  <div>
     <h1 class="title">Bookmarko</h1>
-    <v-container class="content-container" fluid>
+    <div class="content-container">
       <Bookmarko />
-    </v-container>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.app-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .title {
   text-align: center;
   margin: 0;
@@ -26,7 +20,6 @@ import Bookmarko from './components/Bookmarko.vue'
 }
 
 .content-container {
-  flex: 1;
-  overflow: auto;
+  margin: 0 auto; /* 中央揃えにします */
 }
 </style>

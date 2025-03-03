@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="centered-container">
     <v-row align="stretch">
-      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="3" lg="2" class="padded-col">
+      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="4" md="3" lg="2" class="padded-col">
         <v-card>
           <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
           <v-card-text>
@@ -89,8 +89,8 @@ export default defineComponent({
 
 <style scoped>
 .centered-container {
-  margin: 0;
-  max-width: 100%; /* 必要に応じて最大幅を設定します */
+  margin: 0 auto;
+  width: 90%; /* 親要素をはみ出さないようにする */
 }
 
 .left-align {
