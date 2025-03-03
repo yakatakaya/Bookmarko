@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col v-for="folder in folders" :key="folder.id" cols="12" md="4">
+    <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="6" lg="3">
       <v-card>
         <v-card-title>{{ folder.title }}</v-card-title>
         <v-card-text>
@@ -82,11 +82,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.v-card {
-  margin: 10px 0;
-}
-
 .left-align {
   text-align: left;
 }
+
 </style>
