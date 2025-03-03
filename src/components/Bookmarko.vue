@@ -87,12 +87,18 @@ export default defineComponent({
 .left-align {
   text-align: left;
 }
+
 .no-bullets {
   list-style-type: none;
   padding-left: 0;
 }
+
 .custom-card-title {
   background-color: #7b7b7b; /* ここで背景色を指定します */
   color: #ffffff; /* 必要に応じてテキストの色も指定します */
+}
+
+li.left-align:hover {
+  background-color: #e0e0e0; /* ハイライトの背景色を指定します */
 }
 </style>
