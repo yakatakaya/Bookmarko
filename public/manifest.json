@@ -1,6 +1,6 @@
 {
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "Bookmarko",
+    "description": "Bookmark manager",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
