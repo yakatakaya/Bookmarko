@@ -8,7 +8,7 @@
             <ul class="no-bullets">
               <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="left-align">
                 <img :src="getFaviconUrl(bookmark.url)" alt="favicon" class="favicon">
-                <a :href="bookmark.url" target="_blank">{{ bookmark.title }}</a>
+                <a :href="bookmark.url" target="_blank" class="ellipsis">{{ bookmark.title }}</a>
               </li>
             </ul>
           </v-card-text>
@@ -90,6 +90,8 @@ export default defineComponent({
 <style scoped>
 .left-align {
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .no-bullets {
@@ -115,5 +117,13 @@ li.left-align:hover {
 a {
   color: inherit; /* リンクの文字色を親要素から継承します */
   text-decoration: none; /* 必要に応じて下線を消します */
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
 }
 </style>
