@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="centered-container">
     <v-row align="stretch">
-      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="3" lg="2">
+      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="12" md="3" lg="2" class="padded-col">
         <v-card>
           <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
           <v-card-text>
@@ -88,6 +88,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.centered-container {
+  margin: 0;
+  max-width: 100%; /* 必要に応じて最大幅を設定します */
+}
+
 .left-align {
   text-align: left;
   display: flex;
@@ -125,5 +130,10 @@ a {
   text-overflow: ellipsis;
   display: inline-block;
   max-width: 100%;
+}
+
+.padded-col {
+  padding: 8px; /* 必要に応じてパディングを設定します */
+  box-sizing: border-box; /* パディングを含めたサイズにします */
 }
 </style>
