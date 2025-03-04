@@ -1,8 +1,6 @@
 <template>
-<div>
-    <a href="javascript:void(0);" @click="openNewTab">Open new tab</a>
-    <br>
-    <a href="javascript:void(0);" @click="openCurrentTab">Open current tab</a></div>
+  <div class="menu-item" id="item1" @click="openNewTab">Open new tab</div>
+  <div class="menu-item" id="item2" @click="openCurrentTab">Open current tab</div>
 </template>
 
 <script lang="ts">
@@ -34,9 +32,24 @@ export default {
 </script>
 
 <style scoped>
-button {
-padding: 10px;
-font-size: 16px;
-}
+    body {
+      width: 200px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background-color: #ddd;
+    }
 </style>
-  

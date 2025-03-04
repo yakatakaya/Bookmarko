@@ -10,7 +10,8 @@
     "permissions": [
       "tabs",
       "bookmarks",
-      "storage"
+      "storage",
+      "contextMenus"
     ],
     "action": {
       "default_popup": "popup.html",
