@@ -23,7 +23,7 @@ import Bookmarko from './components/Bookmarko.vue'
 .logo {
   width: 35vw; /* ロゴの幅をウィンドウサイズの25%に指定 */
   height: auto;
-  margin-top: 20px; /* 上部にマージンを追加 */
+  margin: 70px; /* 上部にマージンを追加 */
 }
 
 .content-container {
@@ -32,6 +32,5 @@ import Bookmarko from './components/Bookmarko.vue'
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 </style>
