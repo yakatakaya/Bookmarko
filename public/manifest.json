@@ -3,6 +3,7 @@
     "description": "Bookmark manager",
     "version": "1.0",
     "manifest_version": 3,
+    "homepage_url": "https://github.com/yakatakaya/Bookmarko",
     "background": {
       "service_worker": "background.js"
     },
@@ -13,10 +14,15 @@
     ],
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "ribbon_128.png"
+      "default_icon": "bookmark_128.png"
     },
     "host_permissions": [
       "http://*/*",
       "https://*/*"
-    ]
+    ],
+    "icons": {
+      "16": "bookmark_16.png",
+      "64": "bookmark_64.png",
+      "128": "bookmark_128.png"
+    }
   }
