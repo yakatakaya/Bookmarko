@@ -48,7 +48,16 @@ export default defineComponent({
   methods: {
     loadBookmarks() {
       chrome.bookmarks.getTree((bookmarkTreeNodes) => {
-        this.folders = this.processBookmarks(bookmarkTreeNodes);
+        bookmarkTreeNodes.forEach((node) => {
+          node.children?.forEach((child) => {
+            console.info(JSON.stringify(child, null, 2));
+            if (child.index === 0) {
+              console.info(JSON.stringify(child, null, 2));
+              this.folders = this.processBookmarks([child]);
+            }
+          });
+         
+        });
       });
     },
     processBookmarks(bookmarkTreeNodes: chrome.bookmarks.BookmarkTreeNode[]): Folder[] {
