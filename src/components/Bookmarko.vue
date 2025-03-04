@@ -20,6 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import './css/Bookmarko.css'
 
 interface Bookmark {
   id: string;
@@ -86,54 +87,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.centered-container {
-  margin: 0 auto;
-  width: 90%; /* 親要素をはみ出さないようにする */
-}
-
-.left-align {
-  text-align: left;
-  display: flex;
-  align-items: center;
-}
-
-.no-bullets {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.custom-card-title {
-  background-color: #7b7b7b; /* ここで背景色を指定します */
-  color: #ffffff; /* 必要に応じてテキストの色も指定します */
-}
-
-li.left-align:hover {
-  background-color: #e0e0e0; /* ハイライトの背景色を指定します */
-}
-
-.favicon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-}
-
-a {
-  color: inherit; /* リンクの文字色を親要素から継承します */
-  text-decoration: none; /* 必要に応じて下線を消します */
-}
-
-.ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  max-width: 100%;
-}
-
-.padded-col {
-  padding: 8px; /* 必要に応じてパディングを設定します */
-  box-sizing: border-box; /* パディングを含めたサイズにします */
-}
-</style>
