@@ -65,3 +65,8 @@
     padding: 8px; /* 必要に応じてパディングを設定します */
     box-sizing: border-box; /* パディングを含めたサイズにします */
   }
+
+  .card {
+    width: 200px;
+    height: auto;
+  }

@@ -1,7 +1,6 @@
 <template>
-  <v-container fluid class="centered-container">
-    <v-row align="stretch">
-      <v-col v-for="folder in folders" :key="folder.id" cols="12" sm="4" md="3" lg="2" class="padded-col">
+  <v-container fluid class="centered-container container">
+      <div v-for="folder in folders" :key="folder.id"  class="card">
         <v-card>
           <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
           <v-card-text>
@@ -13,8 +12,7 @@
             </ul>
           </v-card-text>
         </v-card>
-      </v-col>
-    </v-row>
+      </div>
   </v-container>
 </template>
 
