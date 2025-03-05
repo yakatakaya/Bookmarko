@@ -1,6 +1,6 @@
 {
     "name": "Bookmarko",
-    "description": "Bookmark manager",
+    "description": "This feature is just for displaying bookmarks in an easy-to-view list.",
     "version": "1.0",
     "manifest_version": 3,
     "homepage_url": "https://github.com/yakatakaya/Bookmarko",
