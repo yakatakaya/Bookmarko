@@ -1,14 +1,29 @@
 <script setup lang="ts">
 import Bookmarko from './components/Bookmarko.vue'
+import '@mdi/font/css/materialdesignicons.css' // Import the Material Design Icons CSS
+
+function redirectToGoogle() {
+  window.location.href = 'https://www.google.com';
+}
 </script>
 
 <template>
-  <div class="app-container">
-    <img src="/bookmarko.png" alt="Bookmarko Logo" class="logo" />
-    <div class="content-container">
-      <Bookmarko />
+  <v-app>
+    <v-app-bar app dark>
+      <img src="/bookmark_128.png" alt="Bookmark Icon" style="height: 30px; margin: 0 10px 0 20px;">
+      <v-toolbar-title>Bookmarko</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon @click="redirectToGoogle">
+        <v-icon color="white">mdi-google</v-icon>
+      </v-btn>
+    </v-app-bar>
+      
+    <div class="app-container">
+      <div class="content-container">
+        <Bookmarko />
+      </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <style scoped>
@@ -18,13 +33,9 @@ import Bookmarko from './components/Bookmarko.vue'
   align-items: center;
   background-color: #0E3147; /* 薄いグレー */
   height: 100vh;
+  padding-top: 150px;
 }
 
-.logo {
-  width: 35vw; /* ロゴの幅をウィンドウサイズの25%に指定 */
-  height: auto;
-  margin: 70px; /* 上部にマージンを追加 */
-}
 
 .content-container {
   margin: 0 auto; /* 中央揃えにします */

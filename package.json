@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "magic-grid": "^3.4.7",
     "vite-plugin-vuetify": "^2.1.0",
     "vue": "^3.5.13",
-    "vuetify": "^3.7.14"
+    "vuetify": "^3.7.0-beta.1"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.307",
