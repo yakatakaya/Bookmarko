@@ -32,7 +32,6 @@ function redirectToGoogle() {
   flex-direction: column;
   align-items: center;
   background-color: #0E3147; /* 薄いグレー */
-  height: 100vh;
   padding-top: 150px;
 }
 
