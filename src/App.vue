@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import Bookmarko from './components/Bookmarko.vue'
+import Settings from './components/Settings.vue' // Import the Settings component
 import '@mdi/font/css/materialdesignicons.css' // Import the Material Design Icons CSS
+import { ref } from 'vue'
+
+const showSettings = ref(false);
 
 function redirectToGoogle() {
   window.location.href = 'https://www.google.com';
@@ -24,6 +28,14 @@ window.addEventListener('keydown', handleKeydown);
       <v-btn icon @click="redirectToGoogle">
         <v-icon color="white">mdi-google</v-icon>
       </v-btn>
+      <v-menu v-model="showSettings" offset-y>
+        <template v-slot:activator="{ props }">
+          <v-btn icon v-bind="props">
+            <v-icon color="white">mdi-cog</v-icon>
+          </v-btn>
+        </template>
+        <Settings />
+      </v-menu>
     </v-app-bar>
       
     <div class="app-container">
@@ -42,7 +54,6 @@ window.addEventListener('keydown', handleKeydown);
   background-color: #0E3147; /* 薄いグレー */
   padding-top: 150px;
 }
-
 
 .content-container {
   margin: 0 auto; /* 中央揃えにします */
