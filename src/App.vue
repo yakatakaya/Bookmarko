@@ -5,6 +5,14 @@ import '@mdi/font/css/materialdesignicons.css' // Import the Material Design Ico
 function redirectToGoogle() {
   window.location.href = 'https://www.google.com';
 }
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.altKey && event.key === 'g') {
+    redirectToGoogle();
+  }
+}
+
+window.addEventListener('keydown', handleKeydown);
 </script>
 
 <template>
