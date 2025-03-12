@@ -13,7 +13,7 @@ const vuetify = createVuetify({
         themes: {
           dark: {
             colors: {
-                background: '#0E3147', // 背景色を変更
+                background: '#0E3147', // Default background color
             }
           },
         },
@@ -28,5 +28,11 @@ const vuetify = createVuetify({
       },
     },
 })
+
+chrome.storage.sync.get('backgroundColor', (result) => {
+  if (result.backgroundColor) {
+    vuetify.theme.themes.value.dark.colors.background = result.backgroundColor;
+  }
+});
 
 createApp(App).use(vuetify).mount('#app')

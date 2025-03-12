@@ -1,4 +1,32 @@
-import { createApp } from 'vue';
-import Popup from './popup.vue';
+import { createApp } from 'vue'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import { aliases, mdi } from 'vuetify/iconsets/mdi' // Import the mdi icon set
 
-createApp(Popup).mount('#popup');
+import Settings from './components/Settings.vue'
+import '@mdi/font/css/materialdesignicons.css' // Import the Material Design Icons CSS
+
+const vuetify = createVuetify({
+    theme: {
+        defaultTheme: 'dark',
+        themes: {
+          dark: {
+            colors: {
+                background: '#0E3147', // 背景色を変更
+            }
+          },
+        },
+      },
+    components,
+    directives,
+    icons: {
+      defaultSet: 'mdi',
+      aliases,
+      sets: {
+        mdi,
+      },
+    },
+})
+
+createApp(Settings).use(vuetify).mount('#popup')

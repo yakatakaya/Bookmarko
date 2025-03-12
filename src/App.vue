@@ -28,7 +28,7 @@ window.addEventListener('keydown', handleKeydown);
       <v-btn icon @click="redirectToGoogle">
         <v-icon color="white">mdi-google</v-icon>
       </v-btn>
-      <v-menu v-model="showSettings" offset-y>
+      <v-menu v-model="showSettings" offset-y :close-on-content-click="false">
         <template v-slot:activator="{ props }">
           <v-btn icon v-bind="props">
             <v-icon color="white">mdi-cog</v-icon>
@@ -51,7 +51,7 @@ window.addEventListener('keydown', handleKeydown);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0E3147; /* 薄いグレー */
+  opacity: 1.0;
   padding-top: 150px;
 }
 
