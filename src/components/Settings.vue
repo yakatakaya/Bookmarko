@@ -2,10 +2,15 @@
   <v-card style="width: 400px;">
     <v-card-title>Settings</v-card-title>
     <v-card-text>
-      <v-form>
-        <v-label>Background color</v-label>
-        <v-color-picker v-model="color" label="Pick a background color" class="stacked-element"></v-color-picker>
-      </v-form>
+      <v-expansion-panels>
+        <v-expansion-panel>
+          <v-expansion-panel-title>Background Color</v-expansion-panel-title>
+          <v-expansion-panel-text>
+            <!-- Add your background color settings here -->
+            <v-color-picker v-model="backgroundColor" flat></v-color-picker>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-card-text>
     <v-card-actions>
       <v-btn color="primary" @click="saveSettings">Save</v-btn>
@@ -18,17 +23,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const color = ref('#0E3147');
+const backgroundColor = ref('#ffffff'); // Default background color
 
 function saveSettings() {
-  chrome.storage.sync.set({ backgroundColor: color.value }, () => {
+  chrome.storage.sync.set({ backgroundColor: backgroundColor.value }, () => {
     console.log('Settings saved');
     location.reload(); // Reload the page
   });
 }
 
 function resetToDefault() {
-  color.value = '#0E3147'; // Reset to default color
+  backgroundColor.value = '#0E3147'; // Reset to default color
   location.reload(); // Reload the page
 }
 </script>
