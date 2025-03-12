@@ -5,7 +5,7 @@
           <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
           <v-card-text>
             <ul class="no-bullets">
-              <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="left-align">
+              <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="url-link">
                 <img :src="getFaviconUrl(bookmark.url)" alt="favicon" class="favicon">
                 <a :href="bookmark.url" target="_blank" class="ellipsis">{{ bookmark.title }}</a>
               </li>

@@ -3,11 +3,12 @@
     width: 90%; /* 親要素をはみ出さないようにする */
   }
   
-  .left-align {
+  .url-link {
     text-align: left;
     display: flex;
     align-items: center;
-    margin-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .no-bullets {
