@@ -1,4 +1,4 @@
-.centered-container {
+  .centered-container {
     margin: 0 auto;
     width: 90%; /* 親要素をはみ出さないようにする */
   }
@@ -29,7 +29,7 @@
   
   a {
     height: 18px;
-    color: white; /* リンクの文字色を親要素から継承します */
+    color: white;
     text-decoration: none; /* 必要に応じて下線を消します */
     align-items: center;
     transition: .3s;

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Bookmarko from './components/Bookmarko.vue'
 import Settings from './components/Settings.vue' // Import the Settings component
-import '@mdi/font/css/materialdesignicons.css' // Import the Material Design Icons CSS
 import { ref } from 'vue'
 
 const showSettings = ref(false);
@@ -21,7 +20,7 @@ window.addEventListener('keydown', handleKeydown);
 
 <template>
   <v-app>
-    <v-app-bar app dark>
+    <v-app-bar>
       <img src="/bookmark_128.png" alt="Bookmark Icon" style="height: 30px; margin: 0 10px 0 20px;">
       <v-toolbar-title>Bookmarko</v-toolbar-title>
       <v-spacer></v-spacer>

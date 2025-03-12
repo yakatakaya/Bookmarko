@@ -22,7 +22,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const backgroundColor = ref('#ffffff'); // Default background color
+const backgroundColor = ref('#122029'); // Default background color
+chrome.storage.sync.get('backgroundColor', (result) => {
+  backgroundColor.value = result.backgroundColor || backgroundColor.value;
+});
 
 function saveSettings() {
   chrome.storage.sync.set({ backgroundColor: backgroundColor.value }, () => {
@@ -32,8 +35,11 @@ function saveSettings() {
 }
 
 function resetToDefault() {
-  backgroundColor.value = '#0E3147'; // Reset to default color
-  location.reload(); // Reload the page
+  backgroundColor.value = '#122029'; // Reset to default color
+  chrome.storage.sync.set({ backgroundColor: backgroundColor.value }, () => {
+    console.log('Settings saved');
+    location.reload(); // Reload the page
+  });
 }
 </script>
 
