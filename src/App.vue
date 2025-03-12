@@ -26,12 +26,12 @@ window.addEventListener('keydown', handleKeydown);
       <v-toolbar-title>Bookmarko</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon @click="redirectToGoogle">
-        <v-icon color="white">mdi-google</v-icon>
+        <v-icon>mdi-google</v-icon>
       </v-btn>
       <v-menu v-model="showSettings" offset-y :close-on-content-click="false">
         <template v-slot:activator="{ props }">
           <v-btn icon v-bind="props">
-            <v-icon color="white">mdi-cog</v-icon>
+            <v-icon>mdi-cog</v-icon>
           </v-btn>
         </template>
         <Settings />

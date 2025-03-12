@@ -14,7 +14,6 @@
     </v-card-text>
     <v-card-actions>
       <v-btn color="primary" @click="saveSettings">Save</v-btn>
-      <v-btn variant="text">Cancel</v-btn>
       <v-btn variant="text" @click="resetToDefault">Reset to Default</v-btn> <!-- Added button -->
     </v-card-actions>
   </v-card>
