@@ -1,4 +1,4 @@
-  .centered-container {
+.centered-container {
     margin: 0 auto;
     width: 90%; /* 親要素をはみ出さないようにする */
   }
@@ -72,6 +72,5 @@
   }
 
   .card {
-    width: 200px;
     height: auto;
   }
