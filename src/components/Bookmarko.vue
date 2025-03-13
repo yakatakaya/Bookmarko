@@ -3,7 +3,7 @@
     <div v-for="folder in folders" :key="folder.id" :style="{ width: cardWidth + 'px' }" class="card">
       <v-card>
         <v-card-title class="custom-card-title">{{ folder.title }}</v-card-title>
-        <v-card-text>
+        <v-card-text class="v-card-text">
           <ul class="no-bullets">
             <li v-for="bookmark in folder.bookmarks" :key="bookmark.id" class="url-link">
               <img :src="getFaviconUrl(bookmark.url)" alt="favicon" class="favicon">
